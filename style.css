@@ -1,0 +1,246 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --card: #ffffff;
+    --radius: 1rem;
+  }
+  
+  /* =========================
+     BASE STYLES
+  ========================= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* =========================
+     NAVIGATION
+  ========================= */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+  
+  nav a:hover {
+    color: var(--primary);
+  }
+  
+  /* =========================
+     HAMBURGER MENU
+  ========================= */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+  }
+  
+  /* =========================
+     HERO SECTION
+  ========================= */
+  #hero {
+    padding: 10vh 5%;
+    text-align: center;
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+  }
+  
+  #hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+  }
+  
+  #hero p {
+    max-width: 50rem;
+    margin: 1rem auto;
+    color: #475569;
+  }
+  
+  /* =========================
+     SECTIONS
+  ========================= */
+  section {
+    padding: 6vh 5%;
+    max-width: 70rem;
+    margin: auto;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* =========================
+     SKILLS GRID
+  ========================= */
+  #skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+  
+  #skills li {
+    list-style: none;
+    background: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+  }
+  
+  #skills li:hover {
+    transform: scale(1.05);
+  }
+  
+  /* =========================
+     PROJECTS & EXPERIENCE CARDS
+  ========================= */
+  article {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-top: 1.2rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* =========================
+     CONTACT BUTTON
+  ========================= */
+  button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .social-btn {
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* LinkedIn */
+  .linkedin {
+    background: #0a66c2;
+  }
+  
+  /* GitHub */
+  .github {
+    background: #24292e;
+  }
+
+  /* Gmail / Email button */
+  .gmail {
+    background: #ea4335;
+  }
+  
+  /* Optional: focus accessibility */
+  .social-btn:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  /* =========================
+     FOOTER
+  ========================= */
+  footer {
+    text-align: center;
+    padding: 2rem 5%;
+    background: #0f172a;
+    color: white;
+  }
+  
+  /* =========================
+     MOBILE RESPONSIVE
+  ========================= */
+  @media (max-width: 48rem) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav {
+      flex-wrap: wrap;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  }
